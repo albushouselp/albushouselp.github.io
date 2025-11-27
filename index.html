@@ -92,7 +92,7 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, translate 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
 
     .card:hover {
@@ -143,18 +143,12 @@
     }
 
     .card-title {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 600;
       display: flex;
       justify-content: space-between;
       gap: 8px;
       align-items: baseline;
-    }
-
-    .price {
-      font-size: 14px;
-      color: var(--text-muted);
-      white-space: nowrap;
     }
 
     .meta {
@@ -256,7 +250,7 @@
       </div>
       <h1>Las Palmas Stays</h1>
       <p class="subtitle">
-        A curated selection of our rooms, studios and apartments in Las Palmas de Gran Canaria. 
+        A curated selection of our rooms, studios and apartments in Las Palmas de Gran Canaria.
         Choose your place, then book safely via Airbnb or Booking.com.
       </p>
       <p class="tagline">Short stays · Beach vibes · Remote-work friendly</p>
@@ -264,108 +258,754 @@
 
     <main>
       <section class="grid">
+        <!--
+          Images mapping:
+          property01.jpg → Bentagache 1
+          property02.jpg → Bentagache 2
+          property03.jpg → Bentagache 3
+          property04.jpg → Bentagache 4
+          property05.jpg → Canteras Beach Life Apartment
+          property06.jpg → Canteras Beach Studio
+          property07.jpg → Cozy Sunny Studio
+          property08.jpg → Juan Rejon 1
+          property09.jpg → Juan Rejon 2
+          property10.jpg → Juan Rejon 3
+          property11.jpg → Juan Rejon 4
+          property12.jpg → Linda Reina
+          property13.jpg → Lovely Spacious Three Bedroom Flat
+          property14.jpg → Preciosa Reina
+          property15.jpg → Raymond 1
+          property16.jpg → Raymond 2
+          property17.jpg → Raymond 3
+          property18.jpg → Raymond 4
+          property19.jpg → Sevilla 1
+          property20.jpg → Sevilla 2
+          property21.jpg → Sevilla 3
+          property22.jpg → The Stars 1
+          property23.jpg → The Stars 2
+          property24.jpg → The Stars 3
+        -->
 
-        <!-- PROPERTY 1 -->
+        <!-- Bentagache 1 -->
         <article class="card">
           <div class="card-img">
-            <!-- TODO: replace with your real photo URL or upload /images and link there -->
-            <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Las Canteras Beach Studio" />
+            <img src="images/property01.jpg" alt="Bentagache 1 · Room" />
             <div class="badge">
-              <span>★</span> Las Canteras
+              <span>🏠</span> Bentagache
             </div>
           </div>
           <div class="card-body">
             <div class="card-title">
-              <span>Beachfront Studio · 2 guests</span>
-              <span class="price">from €85 / night</span>
-            </div>
-            <div class="meta">
-              <span class="meta-pill">1 min to Las Canteras</span>
-              <span class="meta-pill">Fast Wi-Fi</span>
-              <span class="meta-pill">Kitchen · AC</span>
-            </div>
-            <p class="desc">
-              Bright studio with side sea view, ideal for short stays and remote workers. 
-              Cafés, surf schools and the promenade are just around the corner.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="https://www.airbnb.com" target="_blank" rel="noopener noreferrer">
-                View on Airbnb
-              </a>
-              <a class="btn btn-outline" href="https://www.booking.com" target="_blank" rel="noopener noreferrer">
-                View on Booking.com
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROPERTY 2 -->
-        <article class="card">
-          <div class="card-img">
-            <img src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg" alt="Guanarteme Room" />
-            <div class="badge">
-              <span>🏠</span> Guanarteme
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-title">
-              <span>Cozy Room · 1–2 guests</span>
-              <span class="price">from €55 / night</span>
+              <span>Bentagache 1 · Room</span>
             </div>
             <div class="meta">
               <span class="meta-pill">Private room</span>
-              <span class="meta-pill">Shared kitchen</span>
-              <span class="meta-pill">Great for solo travellers</span>
+              <span class="meta-pill">Shared apartment</span>
             </div>
             <p class="desc">
-              Comfortable room in a quiet street close to bars, supermarkets and the beach. 
-              Perfect base for a few days in the city.
+              Cozy private room in a shared apartment, ideal for short stays in Las Palmas.
             </p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://www.airbnb.com" target="_blank" rel="noopener noreferrer">
+              <!-- Replace # with real Airbnb / Booking links -->
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
                 View on Airbnb
               </a>
-              <a class="btn btn-outline" href="https://www.booking.com" target="_blank" rel="noopener noreferrer">
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
                 View on Booking.com
               </a>
             </div>
           </div>
         </article>
 
-        <!-- PROPERTY 3 -->
+        <!-- Bentagache 2 -->
         <article class="card">
           <div class="card-img">
-            <img src="https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg" alt="Alcaravaneras Loft" />
+            <img src="images/property02.jpg" alt="Bentagache 2 · Room" />
             <div class="badge">
-              <span>🌇</span> Alcaravaneras
+              <span>🏠</span> Bentagache
             </div>
           </div>
           <div class="card-body">
             <div class="card-title">
-              <span>City Loft · 3 guests</span>
-              <span class="price">from €70 / night</span>
+              <span>Bentagache 2 · Room</span>
             </div>
             <div class="meta">
-              <span class="meta-pill">Balcony</span>
-              <span class="meta-pill">Workspace</span>
-              <span class="meta-pill">Good for longer stays</span>
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
             </div>
             <p class="desc">
-              Modern loft between Alcaravaneras beach and Triana. 
-              Great option if you want both the sea and the city vibe.
+              Bright room in Bentagache, walking distance to local services and public transport.
             </p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://www.airbnb.com" target="_blank" rel="noopener noreferrer">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
                 View on Airbnb
               </a>
-              <a class="btn btn-outline" href="https://www.booking.com" target="_blank" rel="noopener noreferrer">
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
                 View on Booking.com
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Duplicate the <article class="card"> block above for more properties -->
+        <!-- Bentagache 3 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property03.jpg" alt="Bentagache 3 · Room" />
+            <div class="badge">
+              <span>🏠</span> Bentagache
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Bentagache 3 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Simple and comfortable room, perfect base for exploring Las Palmas.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bentagache 4 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property04.jpg" alt="Bentagache 4 · Room" />
+            <div class="badge">
+              <span>🏠</span> Bentagache
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Bentagache 4 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Room in a shared flat, good option for budget-friendly short visits.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Canteras Beach Life Apartment -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property05.jpg" alt="Canteras Beach Life Apartment" />
+            <div class="badge">
+              <span>🌊</span> Las Canteras
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Canteras Beach Life Apartment</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Entire apartment</span>
+              <span class="meta-pill">Near the beach</span>
+            </div>
+            <p class="desc">
+              Spacious apartment next to Las Canteras beach, ideal for couples or small families.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Canteras Beach Studio -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property06.jpg" alt="Canteras Beach Studio" />
+            <div class="badge">
+              <span>🌊</span> Las Canteras
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Canteras Beach Studio</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Studio</span>
+              <span class="meta-pill">Steps to the beach</span>
+            </div>
+            <p class="desc">
+              Compact studio with everything you need for a beach-focused stay in Las Palmas.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cozy Sunny Studio -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property07.jpg" alt="Cozy Sunny Studio" />
+            <div class="badge">
+              <span>☀️</span> Las Palmas
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Cozy Sunny Studio</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Studio</span>
+              <span class="meta-pill">Bright & cozy</span>
+            </div>
+            <p class="desc">
+              Sunny studio with a comfortable layout, perfect for solo travellers or couples.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Juan Rejon 1 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property08.jpg" alt="Juan Rejon 1 · Room" />
+            <div class="badge">
+              <span>🏙️</span> Juan Rejon
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Juan Rejon 1 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Private room close to the port area and Las Canteras, with easy access to buses.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Juan Rejon 2 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property09.jpg" alt="Juan Rejon 2 · Room" />
+            <div class="badge">
+              <span>🏙️</span> Juan Rejon
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Juan Rejon 2 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Comfortable room near shops and local cafés, good for short business or leisure trips.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Juan Rejon 3 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property10.jpg" alt="Juan Rejon 3 · Room" />
+            <div class="badge">
+              <span>🏙️</span> Juan Rejon
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Juan Rejon 3 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Simple room in a shared flat, great for travellers who just need a practical base.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Juan Rejon 4 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property11.jpg" alt="Juan Rejon 4 · Room" />
+            <div class="badge">
+              <span>🏙️</span> Juan Rejon
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Juan Rejon 4 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Another room option in the Juan Rejon flat, close to the sea and local life.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Linda Reina -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property12.jpg" alt="Linda Reina · Apartment" />
+            <div class="badge">
+              <span>👑</span> Linda Reina
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Linda Reina</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Entire apartment</span>
+              <span class="meta-pill">Comfortable stay</span>
+            </div>
+            <p class="desc">
+              Charming apartment with a warm atmosphere, suitable for longer or shorter stays.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lovely Spacious Three Bedroom Flat -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property13.jpg" alt="Lovely Spacious Three Bedroom Flat" />
+            <div class="badge">
+              <span>👨‍👩‍👧‍👦</span> Las Palmas
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Lovely Spacious Three Bedroom Flat</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">3 bedrooms</span>
+              <span class="meta-pill">Entire flat</span>
+            </div>
+            <p class="desc">
+              Large, comfortable flat ideal for families or groups who need space and comfort.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Preciosa Reina -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property14.jpg" alt="Preciosa Reina · Apartment" />
+            <div class="badge">
+              <span>👑</span> Preciosa Reina
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Preciosa Reina</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Entire apartment</span>
+              <span class="meta-pill">Stylish</span>
+            </div>
+            <p class="desc">
+              Beautiful apartment with a stylish feel, suitable for a relaxed city break.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Raymond 1 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property15.jpg" alt="Raymond 1 · Room" />
+            <div class="badge">
+              <span>🏠</span> Raymond
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Raymond 1 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Cozy room in the Raymond flat, with access to a shared kitchen and living area.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Raymond 2 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property16.jpg" alt="Raymond 2 · Room" />
+            <div class="badge">
+              <span>🏠</span> Raymond
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Raymond 2 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Comfortable room suited for short city trips or digital nomads on a budget.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Raymond 3 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property17.jpg" alt="Raymond 3 · Room" />
+            <div class="badge">
+              <span>🏠</span> Raymond
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Raymond 3 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Simple but functional room, nice for guests who spend most time out exploring.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Raymond 4 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property18.jpg" alt="Raymond 4 · Room" />
+            <div class="badge">
+              <span>🏠</span> Raymond
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Raymond 4 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Another option in the Raymond flat, ideal for short stays and city breaks.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sevilla 1 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property19.jpg" alt="Sevilla 1 · Room" />
+            <div class="badge">
+              <span>🏠</span> Sevilla
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Sevilla 1 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Calm room in the Sevilla flat, good for rest after exploring the city.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sevilla 2 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property20.jpg" alt="Sevilla 2 · Room" />
+            <div class="badge">
+              <span>🏠</span> Sevilla
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Sevilla 2 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Room option in the Sevilla flat, close to everyday amenities and transport.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sevilla 3 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property21.jpg" alt="Sevilla 3 · Room" />
+            <div class="badge">
+              <span>🏠</span> Sevilla
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>Sevilla 3 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Another room choice in the Sevilla flat, for simple and practical stays.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- The Stars 1 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property22.jpg" alt="The Stars 1 · Room" />
+            <div class="badge">
+              <span>⭐</span> The Stars
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>The Stars 1 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Room in The Stars apartment, a nice base for discovering Las Palmas.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- The Stars 2 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property23.jpg" alt="The Stars 2 · Room" />
+            <div class="badge">
+              <span>⭐</span> The Stars
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>The Stars 2 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Another private room in The Stars flat, ideal for short and simple stays.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- The Stars 3 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/property24.jpg" alt="The Stars 3 · Room" />
+            <div class="badge">
+              <span>⭐</span> The Stars
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <span>The Stars 3 · Room</span>
+            </div>
+            <div class="meta">
+              <span class="meta-pill">Private room</span>
+              <span class="meta-pill">Shared apartment</span>
+            </div>
+            <p class="desc">
+              Third room in The Stars apartment, for guests who want a simple, central stay.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                View on Airbnb
+              </a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">
+                View on Booking.com
+              </a>
+            </div>
+          </div>
+        </article>
 
       </section>
     </main>
@@ -381,3 +1021,4 @@
   </script>
 </body>
 </html>
+
