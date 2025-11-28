@@ -20,7 +20,7 @@
       --radius-lg: 18px;
       --shadow-soft: 0 8px 24px rgba(0,0,0,0.05);
 
-      /* New colors */
+      /* Buttons colors */
       --airbnb-orange: #ff5a5f;
       --airbnb-orange-hover: #e14e52;
       --booking-blue: #1e6edb;
@@ -36,23 +36,20 @@
       position: relative;
       min-height: 100vh;
       overflow-x: hidden;
-      /* keep your soft gradient on top of blurred image */
-      background: radial-gradient(circle at top, #f1e3cf 0, #f4f6f1 36%, #eef2ea 100%);
+      background: #f4f6f1; /* fallback under parallax */
     }
 
-    /* Parallax blurred background layer */
-    body::before {
-      content: "";
+    /* PARALLAX BACKGROUND LAYER */
+    .parallax-bg {
       position: fixed;
       inset: 0;
       z-index: -1;
       background-image: url("images/bg.jpg");
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed; /* parallax-style scroll */
-      filter: blur(15px); /* ~15% blur requested */
+      background-position: center 0px;
+      background-repeat: no-repeat;
+      filter: blur(15px);
       transform: scale(1.05); /* avoid blur edges */
-      opacity: 0.55; /* keep it soft under gradient */
     }
 
     .page {
@@ -294,6 +291,9 @@
   </style>
 </head>
 <body>
+  <!-- PARALLAX BACKGROUND -->
+  <div class="parallax-bg"></div>
+
   <div class="page">
     <header>
       <div class="logo-pill">
@@ -627,7 +627,7 @@
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Raymond 3</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">🗺️</a>
+              <a class="location-icon" href="https://maps.app.goo.gl/gg3KJGY3Y4MDDuNy6" target="_blank">🗺️</a>
             </div>
             <div class="meta">
               <span class="meta-pill">Private room</span>
@@ -648,7 +648,7 @@
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Raymond 4</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">🗺️</a>
+              <a class="location-icon" href="https://maps.app.goo.gl/gg3KJGY3Y4MDDuNy6" target="_blank">🗺️</a>
             </div>
             <div class="meta">
               <span class="meta-pill">Private room</span>
@@ -798,7 +798,16 @@
   </div>
 
   <script>
+    // year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // PARALLAX EFFECT: move background image slower than scroll
+    const parallax = document.querySelector('.parallax-bg');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      const offset = scrolled * 0.3; // 0.3 = slower than content
+      parallax.style.backgroundPosition = `center ${-offset}px`;
+    });
   </script>
 </body>
 </html>
