@@ -19,7 +19,14 @@
       --text-muted: #6c746a;
       --radius-lg: 18px;
       --shadow-soft: 0 8px 24px rgba(0,0,0,0.05);
+
+      /* New colors */
+      --airbnb-orange: #ff5a5f;
+      --airbnb-orange-hover: #e14e52;
+      --booking-blue: #1e6edb;
+      --booking-blue-hover: #195cb8;
     }
+
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -27,15 +34,18 @@
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text-main);
     }
+
     .page {
       max-width: 1100px;
       margin: 0 auto;
       padding: 24px 16px 48px;
     }
+
     header {
       text-align: center;
       padding: 16px 0 32px;
     }
+
     .logo-pill {
       display: inline-flex;
       align-items: center;
@@ -49,11 +59,13 @@
       text-transform: uppercase;
       font-weight: 600;
     }
+
     h1 {
       margin: 16px 0 8px;
       font-size: clamp(28px, 4vw, 34px);
       letter-spacing: 0.02em;
     }
+
     .subtitle {
       margin: 0 auto;
       max-width: 520px;
@@ -61,6 +73,7 @@
       color: var(--text-muted);
       line-height: 1.5;
     }
+
     .tagline {
       margin-top: 8px;
       font-size: 13px;
@@ -68,12 +81,14 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
       margin-top: 32px;
     }
+
     .card {
       background: var(--card-bg);
       border-radius: var(--radius-lg);
@@ -112,6 +127,7 @@
       height: 100%;
       object-fit: cover;
     }
+
     .badge {
       position: absolute;
       left: 12px;
@@ -125,6 +141,7 @@
       align-items: center;
       gap: 6px;
     }
+
     .card-body {
       padding: 14px 14px 12px;
       display: flex;
@@ -132,10 +149,12 @@
       gap: 8px;
       flex: 1;
     }
+
     .card-title {
       font-size: 16px;
       font-weight: 600;
     }
+
     .meta {
       font-size: 13px;
       color: var(--text-muted);
@@ -143,16 +162,19 @@
       flex-wrap: wrap;
       gap: 8px;
     }
+
     .meta-pill {
       padding: 3px 8px;
       border-radius: 999px;
       background: #e4ecdf;
     }
+
     .desc {
       font-size: 13px;
       color: var(--text-main);
       line-height: 1.4;
     }
+
     .actions {
       margin-top: auto;
       display: flex;
@@ -160,6 +182,8 @@
       padding-top: 4px;
       flex-wrap: wrap;
     }
+
+    /* DEFAULT BUTTONS */
     .btn {
       flex: 1;
       min-width: 110px;
@@ -173,6 +197,8 @@
       transition: background 0.18s ease, color 0.18s ease, border 0.18s ease;
       white-space: nowrap;
     }
+
+    /* GREEN Airbnb (rooms only) */
     .btn-primary {
       background: var(--accent);
       color: #fff;
@@ -183,34 +209,43 @@
       background: #3f8155;
       border-color: #3f8155;
     }
-    .btn-outline {
+
+    /* ORANGE Airbnb — full apartments & studios */
+    .btn-airbnb {
+      background: var(--airbnb-orange);
+      border-color: var(--airbnb-orange);
+      color: #fff;
+      font-weight: 600;
+    }
+    .btn-airbnb:hover {
+      background: var(--airbnb-orange-hover);
+      border-color: var(--airbnb-orange-hover);
+    }
+
+    /* BLUE Booking */
+    .btn-booking {
       background: #fff;
-      color: var(--text-main);
-      border-color: #ccd7c8;
+      color: var(--booking-blue);
+      border: 1px solid var(--booking-blue);
     }
-    .btn-outline:hover {
-      border-color: #aabbab;
-      background: #f3f6f1;
+    .btn-booking:hover {
+      background: var(--booking-blue-hover);
+      color: #fff;
+      border-color: var(--booking-blue-hover);
     }
+
     footer {
       margin-top: 40px;
       text-align: center;
       font-size: 11px;
       color: #8e968a;
     }
+
     @media (max-width: 600px) {
-      .page {
-        padding: 16px 12px 32px;
-      }
-      .card-body {
-        padding: 12px 12px 10px;
-      }
-      .actions {
-        flex-direction: column;
-      }
-      .btn {
-        width: 100%;
-      }
+      .page { padding: 16px 12px 32px; }
+      .card-body { padding: 12px 12px 10px; }
+      .actions { flex-direction: column; }
+      .btn { width: 100%; }
     }
   </style>
 </head>
@@ -231,51 +266,11 @@
     <main>
       <section class="grid">
 
-        <!-- Cozy Sunny Studio (ALBAREDA) – FULL/STUDIO -->
-        <article class="card card-full">
-          <div class="card-img">
-            <img src="images/alb.jpeg" alt="Cozy Sunny Studio" />
-            <div class="badge">☀️ Studio</div>
-          </div>
-          <div class="card-body">
-            <div class="card-title">Cozy Sunny Studio</div>
-            <div class="meta">
-              <span class="meta-pill">Studio</span>
-            </div>
-            <p class="desc">
-              Sunny studio close to Las Canteras, perfect for solo travellers or couples.
-            </p>
-            <div class="actions">
-              <!-- Airbnb not provided yet -->
-              <a class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">Airbnb</a>
-              <a class="btn btn-outline" href="https://www.booking.com/hotel/es/sunny-apartment-near-las-canteras-beach.it.html" target="_blank" rel="noopener noreferrer">Booking</a>
-            </div>
-          </div>
-        </article>
+        <!-- =============================== -->
+        <!-- ===== FULL PLACES FIRST ======= -->
+        <!-- =============================== -->
 
-        <!-- Canteras Beach Studio (MOROTE) – FULL/STUDIO -->
-        <article class="card card-full">
-          <div class="card-img">
-            <img src="images/morote.jpeg" alt="Canteras Beach Studio" />
-            <div class="badge">🌊 Las Canteras</div>
-          </div>
-          <div class="card-body">
-            <div class="card-title">Canteras Beach Studio</div>
-            <div class="meta">
-              <span class="meta-pill">Studio</span>
-              <span class="meta-pill">Near the beach</span>
-            </div>
-            <p class="desc">
-              Compact studio with everything you need for a beach-focused stay.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/morote" target="_blank" rel="noopener noreferrer">Airbnb</a>
-              <a class="btn btn-outline" href="https://www.booking.com/hotel/es/canteras-beach-las-palmas-de-gran-canaria.it.html" target="_blank" rel="noopener noreferrer">Booking</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Canteras Beach Life Apartment (RAYMOND FULL) – FULL -->
+        <!-- 1. Canteras Beach Life Apartment -->
         <article class="card card-full">
           <div class="card-img">
             <img src="images/ray.jpeg" alt="Canteras Beach Life Apartment" />
@@ -283,19 +278,80 @@
           </div>
           <div class="card-body">
             <div class="card-title">Canteras Beach Life Apartment</div>
-            <div class="meta">
-              <span class="meta-pill">Entire apartment</span>
-            </div>
-            <p class="desc">
-              Bright apartment beside Las Canteras, ideal for couples or small families.
-            </p>
+            <div class="meta"><span class="meta-pill">Entire apartment</span></div>
+            <p class="desc">Bright apartment beside Las Canteras, ideal for couples or small families.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/lascanteras" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-airbnb" href="https://airbnb.es/h/lascanteras" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
 
-        <!-- Lovely Spacious Three Bedroom Flat (REJON FULL) – FULL -->
+        <!-- 2. Canteras Beach Studio -->
+        <article class="card card-full">
+          <div class="card-img">
+            <img src="images/morote.jpeg" alt="Canteras Beach Studio" />
+            <div class="badge">🌊 Las Canteras</div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Canteras Beach Studio</div>
+            <div class="meta"><span class="meta-pill">Studio</span></div>
+            <p class="desc">Compact studio with everything you need for a beach-focused stay.</p>
+            <div class="actions">
+              <a class="btn btn-airbnb" href="https://airbnb.es/h/morote" target="_blank">Airbnb</a>
+              <a class="btn btn-booking" href="https://www.booking.com/hotel/es/canteras-beach-las-palmas-de-gran-canaria.it.html" target="_blank">Booking</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Cozy Sunny Studio (Albareda) — Booking ONLY -->
+        <article class="card card-full">
+          <div class="card-img">
+            <img src="images/alb.jpeg" alt="Cozy Sunny Studio" />
+            <div class="badge">☀️ Studio</div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Cozy Sunny Studio</div>
+            <div class="meta"><span class="meta-pill">Studio</span></div>
+            <p class="desc">Sunny studio close to Las Canteras, perfect for solo travellers or couples.</p>
+            <div class="actions">
+              <a class="btn btn-booking" href="https://www.booking.com/hotel/es/sunny-apartment-near-las-canteras-beach.it.html" target="_blank">Booking</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Linda Reina -->
+        <article class="card card-full">
+          <div class="card-img">
+            <img src="images/linrey.avif" alt="Linda Reina" />
+            <div class="badge">👑 Reina</div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Linda Reina</div>
+            <div class="meta"><span class="meta-pill">Entire apartment</span></div>
+            <p class="desc">Charming apartment — perfect for a longer stay.</p>
+            <div class="actions">
+              <a class="btn btn-airbnb" href="https://airbnb.es/h/lindareina" target="_blank">Airbnb</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Preciosa Reina -->
+        <article class="card card-full">
+          <div class="card-img">
+            <img src="images/prerey.avif" alt="Preciosa Reina" />
+            <div class="badge">👑 Reina</div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Preciosa Reina</div>
+            <div class="meta"><span class="meta-pill">Entire apartment</span></div>
+            <p class="desc">Stylish apartment with a cozy vibe.</p>
+            <div class="actions">
+              <a class="btn btn-airbnb" href="https://airbnb.es/h/preciosareina" target="_blank">Airbnb</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Lovely Spacious Three Bedroom Flat -->
         <article class="card card-full">
           <div class="card-img">
             <img src="images/rej.jpeg" alt="Lovely Spacious Three Bedroom Flat" />
@@ -307,16 +363,18 @@
               <span class="meta-pill">3 bedrooms</span>
               <span class="meta-pill">Entire flat</span>
             </div>
-            <p class="desc">
-              Large flat with plenty of space and comfort for families or groups.
-            </p>
+            <p class="desc">Large flat with plenty of space and comfort for families or groups.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/casa-sabado" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-airbnb" href="https://airbnb.es/h/casa-sabado" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
 
-        <!-- Bentagache 1–4 (ROOMS) -->
+        <!-- =============================== -->
+        <!-- ======= PRIVATE ROOMS ========= -->
+        <!-- =============================== -->
+
+        <!-- BENTAGACHE 1–4 -->
         <article class="card">
           <div class="card-img">
             <img src="images/benta1.jpeg" alt="Bentagache 1" />
@@ -324,14 +382,10 @@
           </div>
           <div class="card-body">
             <div class="card-title">Bentagache 1</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Cozy private room in a shared apartment.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Cozy private room in a shared apartment.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/bentagache1" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/bentagache1" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
@@ -343,14 +397,10 @@
           </div>
           <div class="card-body">
             <div class="card-title">Bentagache 2</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Bright room in a calm and friendly neighbourhood.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Bright room in a calm and friendly neighbourhood.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/bentagache2" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/bentagache2" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
@@ -362,14 +412,10 @@
           </div>
           <div class="card-body">
             <div class="card-title">Bentagache 3</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              A practical base for exploring Las Palmas.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">A practical base for exploring Las Palmas.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/bentagache3" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/bentagache3" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
@@ -381,96 +427,15 @@
           </div>
           <div class="card-body">
             <div class="card-title">Bentagache 4</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Budget-friendly room in a shared flat.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Budget-friendly room in a shared flat.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/bentagache4" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/bentagache4" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
 
-        <!-- Raymond 1–4 (ROOMS) -->
-        <article class="card">
-          <div class="card-img">
-            <img src="images/ray1.jpg" alt="Raymond 1" />
-            <div class="badge">🏠 Raymond</div>
-          </div>
-          <div class="card-body">
-            <div class="card-title">Raymond 1</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Comfortable room with access to shared spaces.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/lascanteras1" target="_blank" rel="noopener noreferrer">Airbnb</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-img">
-            <img src="images/ray2.jpg" alt="Raymond 2" />
-            <div class="badge">🏠 Raymond</div>
-          </div>
-          <div class="card-body">
-            <div class="card-title">Raymond 2</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Bright room ideal for short visits.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/lascanteras2" target="_blank" rel="noopener noreferrer">Airbnb</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-img">
-            <img src="images/ray3.jpg" alt="Raymond 3" />
-            <div class="badge">🏠 Raymond</div>
-          </div>
-          <div class="card-body">
-            <div class="card-title">Raymond 3</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Simple room for guests who spend most of the day out.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/lascanteras3" target="_blank" rel="noopener noreferrer">Airbnb</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-img">
-            <img src="images/ray4.jpg" alt="Raymond 4" />
-            <div class="badge">🏠 Raymond</div>
-          </div>
-          <div class="card-body">
-            <div class="card-title">Raymond 4</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Another room option in the Raymond apartment.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/lascanteras4" target="_blank" rel="noopener noreferrer">Airbnb</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Juan Rejon 1–3 (ROOMS) -->
+        <!-- JUAN REJON -->
         <article class="card">
           <div class="card-img">
             <img src="images/rej1.jpeg" alt="Juan Rejon 1" />
@@ -478,14 +443,10 @@
           </div>
           <div class="card-body">
             <div class="card-title">Juan Rejon 1</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Private room close to the port and the beach.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Private room close to the port and the beach.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/casa-sabado-bedroom1" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/casa-sabado-bedroom1" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
@@ -497,14 +458,10 @@
           </div>
           <div class="card-body">
             <div class="card-title">Juan Rejon 2</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Room in a shared flat, close to shops and cafés.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Room in a shared flat, close to shops and cafés.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/casa-sabado-bedroom2" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/casa-sabado-bedroom2" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
@@ -516,39 +473,91 @@
           </div>
           <div class="card-body">
             <div class="card-title">Juan Rejon 3</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Simple and bright room ideal for short stays.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Simple and bright room ideal for short stays.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/casa-sabado-bedroom3" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/casa-sabado-bedroom3" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
 
-        <!-- Sevilla 1–4 (ROOMS) -->
+        <!-- RAYMOND -->
         <article class="card">
           <div class="card-img">
-            <img src="images/Sev1.jpeg" alt="Sevilla 1" />
+            <img src="images/ray1.jpg" alt="Raymond 1" />
+            <div class="badge">🏠 Raymond</div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Raymond 1</div>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Comfortable room with access to shared spaces.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://airbnb.es/h/lascanteras1" target="_blank">Airbnb</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="images/ray2.jpg" alt="Raymond 2" />
+            <div class="badge">🏠 Raymond</div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Raymond 2</div>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Bright room ideal for short visits.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://airbnb.es/h/lascanteras2" target="_blank">Airbnb</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="images/ray3.jpg" alt="Raymond 3" />
+            <div class="badge">🏠 Raymond</div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Raymond 3</div>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Simple room for guests who spend most of the day out.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://airbnb.es/h/lascanteras3" target="_blank">Airbnb</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="images/ray4.jpg" alt="Raymond 4" />
+            <div class="badge">🏠 Raymond</div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Raymond 4</div>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Another room option in the Raymond apartment.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://airbnb.es/h/lascanteras4" target="_blank">Airbnb</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SEVILLA 1–4 -->
+        <article class="card">
+          <div class="card-img">
+            <img src="images/sev1.jpeg" alt="Sevilla 1" />
             <div class="badge">🏠 Sevilla</div>
           </div>
           <div class="card-body">
             <div class="card-title">Sevilla 1</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Comfortable room in the Sevilla apartment.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Comfortable room in the Sevilla apartment.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/sevilla1" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/sevilla1" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
 
-        <!-- NEW: Sevilla 2 -->
         <article class="card">
           <div class="card-img">
             <img src="images/sev2.jpeg" alt="Sevilla 2" />
@@ -556,14 +565,10 @@
           </div>
           <div class="card-body">
             <div class="card-title">Sevilla 2</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Another cozy room in the Sevilla apartment.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Another cozy room in the Sevilla apartment.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/csevilla2" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/csevilla2" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
@@ -575,14 +580,10 @@
           </div>
           <div class="card-body">
             <div class="card-title">Sevilla 3</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Room in a shared flat, ideal for simple stays.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Room in a shared flat, ideal for simple stays.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/3beachlife" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/3beachlife" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
@@ -594,58 +595,15 @@
           </div>
           <div class="card-body">
             <div class="card-title">Sevilla 4</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Another room option in the Sevilla property.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Another room option in the Sevilla property.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/4beachlife" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/4beachlife" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
 
-        <!-- Linda Reina & Preciosa Reina – FULL -->
-        <article class="card card-full">
-          <div class="card-img">
-            <img src="images/linrey.avif" alt="Linda Reina" />
-            <div class="badge">👑 Reina</div>
-          </div>
-          <div class="card-body">
-            <div class="card-title">Linda Reina</div>
-            <div class="meta">
-              <span class="meta-pill">Entire apartment</span>
-            </div>
-            <p class="desc">
-              Charming apartment — perfect for a longer stay.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/lindareina" target="_blank" rel="noopener noreferrer">Airbnb</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card-full">
-          <div class="card-img">
-            <img src="images/prerey.avif" alt="Preciosa Reina" />
-            <div class="badge">👑 Reina</div>
-          </div>
-          <div class="card-body">
-            <div class="card-title">Preciosa Reina</div>
-            <div class="meta">
-              <span class="meta-pill">Entire apartment</span>
-            </div>
-            <p class="desc">
-              Stylish apartment with a cozy vibe.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/preciosareina" target="_blank" rel="noopener noreferrer">Airbnb</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- The Stars 1–3 (ROOMS) -->
+        <!-- THE STARS -->
         <article class="card">
           <div class="card-img">
             <img src="images/sol1.avif" alt="The Stars 1" />
@@ -653,14 +611,10 @@
           </div>
           <div class="card-body">
             <div class="card-title">The Stars 1</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Room in The Stars apartment — close to everything.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Room in The Stars apartment — close to everything.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/csol1" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/csol1" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
@@ -672,14 +626,10 @@
           </div>
           <div class="card-body">
             <div class="card-title">The Stars 2</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Another room option in The Stars apartment.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Another room option in The Stars apartment.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/casol2" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/casol2" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
@@ -691,14 +641,10 @@
           </div>
           <div class="card-body">
             <div class="card-title">The Stars 3</div>
-            <div class="meta">
-              <span class="meta-pill">Private room</span>
-            </div>
-            <p class="desc">
-              Third room in The Stars apartment.
-            </p>
+            <div class="meta"><span class="meta-pill">Private room</span></div>
+            <p class="desc">Third room in The Stars apartment.</p>
             <div class="actions">
-              <a class="btn btn-primary" href="https://airbnb.es/h/csol3" target="_blank" rel="noopener noreferrer">Airbnb</a>
+              <a class="btn btn-primary" href="https://airbnb.es/h/csol3" target="_blank">Airbnb</a>
             </div>
           </div>
         </article>
