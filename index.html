@@ -80,7 +80,7 @@
     h1 {
       margin: 16px 0 8px;
       font-size: clamp(28px, 4vw, 34px);
-      letter-spacing: 0.02em;
+      letter-spacing: 0.12em;
     }
 
     .subtitle {
@@ -145,18 +145,30 @@
       object-fit: cover;
     }
 
+    /* MAP BADGE ON IMAGE */
     .badge {
       position: absolute;
       left: 12px;
       top: 12px;
-      padding: 4px 9px;
+      padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(18, 31, 22, 0.72);
+      background: rgba(18, 31, 22, 0.85);
       color: #fff;
       font-size: 11px;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+    }
+    .badge span:first-child {
+      font-size: 12px;
+    }
+    .badge:hover {
+      background: rgba(18, 31, 22, 1);
+      transform: translateY(-1px);
     }
 
     .card-body {
@@ -177,28 +189,6 @@
     .card-title {
       font-size: 16px;
       font-weight: 600;
-    }
-
-    .location-icon {
-      text-decoration: none;
-      font-size: 12px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      border: 1px solid #d0c4ac;
-      background: #ffffff;
-      color: var(--text-main);
-      line-height: 1;
-      flex-shrink: 0;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .location-icon:hover {
-      background: #f1e9df;
-      border-color: #c7b692;
-      transform: translateY(-1px);
     }
 
     .meta {
@@ -256,7 +246,6 @@
       border-color: var(--airbnb-orange-hover);
     }
 
-    /* ORANGE Airbnb — full apartments & studios (same style, separate class just in case) */
     .btn-airbnb {
       background: var(--airbnb-orange);
       border-color: var(--airbnb-orange);
@@ -302,9 +291,9 @@
   <div class="page">
     <header>
       <div class="logo-pill">
-        <span>🏝️</span> Albus House · LPA
+        <span>🏝️</span> Las Palmas Stays
       </div>
-      <h1>Las Palmas Stays</h1>
+      <h1>ALBUS HOUSE LPA</h1>
       <p class="subtitle">
         A curated selection of our rooms, studios and apartments in Las Palmas de Gran Canaria.
         Choose your place and book safely via Airbnb or Booking.com.
@@ -323,14 +312,13 @@
         <article class="card card-full">
           <div class="card-img">
             <img src="images/ray.jpeg" alt="Canteras Beach Life Apartment" />
-            <div class="badge">🌅 Las Canteras</div>
+            <a class="badge" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Canteras Beach Life Apartment</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta">
               <span class="meta-pill">4 bedrooms</span>
@@ -347,14 +335,13 @@
         <article class="card card-full">
           <div class="card-img">
             <img src="images/morote.jpeg" alt="Canteras Beach Studio" />
-            <div class="badge">🌊 Las Canteras</div>
+            <a class="badge" href="https://maps.app.goo.gl/fcBNnMWPbX23EFgDA" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Canteras Beach Studio</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/fcBNnMWPbX23EFgDA" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta">
               <span class="meta-pill">Studio</span>
@@ -371,14 +358,13 @@
         <article class="card card-full">
           <div class="card-img">
             <img src="images/alb.jpeg" alt="Cozy Sunny Studio" />
-            <div class="badge">☀️ Studio</div>
+            <a class="badge" href="https://maps.app.goo.gl/CBoJNjLCqMUFQ5eY6" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Cozy Sunny Studio</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/CBoJNjLCqMUFQ5eY6" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta">
               <span class="meta-pill">Studio</span>
@@ -394,14 +380,13 @@
         <article class="card card-full">
           <div class="card-img">
             <img src="images/linrey.avif" alt="Linda Reina" />
-            <div class="badge">👑 Reina</div>
+            <a class="badge" href="https://maps.app.goo.gl/YVdM6tmussWhvxqa6" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Linda Reina</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/YVdM6tmussWhvxqa6" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta">
               <span class="meta-pill">2 bedrooms</span>
@@ -418,14 +403,13 @@
         <article class="card card-full">
           <div class="card-img">
             <img src="images/prerey.avif" alt="Preciosa Reina" />
-            <div class="badge">👑 Reina</div>
+            <a class="badge" href="https://maps.app.goo.gl/YVdM6tmussWhvxqa6" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Preciosa Reina</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/YVdM6tmussWhvxqa6" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta">
               <span class="meta-pill">1 bedroom</span>
@@ -442,14 +426,13 @@
         <article class="card card-full">
           <div class="card-img">
             <img src="images/rej.jpeg" alt="Lovely Spacious Three Bedroom Flat" />
-            <div class="badge">👨‍👩‍👦 Las Palmas</div>
+            <a class="badge" href="https://maps.app.goo.gl/CpfBATSwLiazKGANA" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Lovely Spacious Three Bedroom Flat</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/CpfBATSwLiazKGANA" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta">
               <span class="meta-pill">3 bedrooms</span>
@@ -470,14 +453,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/benta1.jpeg" alt="Bentagache 1" />
-            <div class="badge">🏠 Bentagache</div>
+            <a class="badge" href="https://maps.app.goo.gl/CUDHekYFHBQmtbQa8" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Bentagache 1</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/CUDHekYFHBQmtbQa8" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Cozy private room in a shared apartment.</p>
@@ -490,14 +472,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/benta2.jpeg" alt="Bentagache 2" />
-            <div class="badge">🏠 Bentagache</div>
+            <a class="badge" href="https://maps.app.goo.gl/CUDHekYFHBQmtbQa8" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Bentagache 2</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/CUDHekYFHBQmtbQa8" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Bright room in a calm and friendly neighbourhood.</p>
@@ -510,14 +491,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/benta3.jpeg" alt="Bentagache 3" />
-            <div class="badge">🏠 Bentagache</div>
+            <a class="badge" href="https://maps.app.goo.gl/CUDHekYFHBQmtbQa8" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Bentagache 3</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/CUDHekYFHBQmtbQa8" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">A practical base for exploring Las Palmas.</p>
@@ -530,14 +510,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/benta4.jpeg" alt="Bentagache 4" />
-            <div class="badge">🏠 Bentagache</div>
+            <a class="badge" href="https://maps.app.goo.gl/CUDHekYFHBQmtbQa8" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Bentagache 4</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/CUDHekYFHBQmtbQa8" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Budget-friendly room in a shared flat.</p>
@@ -551,14 +530,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/rej1.jpeg" alt="Juan Rejon 1" />
-            <div class="badge">🏙️ Juan Rejon</div>
+            <a class="badge" href="https://maps.app.goo.gl/CpfBATSwLiazKGANA" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Juan Rejon 1</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/CpfBATSwLiazKGANA" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Private room close to the port and the beach.</p>
@@ -571,14 +549,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/rej2.jpeg" alt="Juan Rejon 2" />
-            <div class="badge">🏙️ Juan Rejon</div>
+            <a class="badge" href="https://maps.app.goo.gl/CpfBATSwLiazKGANA" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Juan Rejon 2</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/CpfBATSwLiazKGANA" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Room in a shared flat, close to shops and cafés.</p>
@@ -591,14 +568,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/rej3.jpeg" alt="Juan Rejon 3" />
-            <div class="badge">🏙️ Juan Rejon</div>
+            <a class="badge" href="https://maps.app.goo.gl/CpfBATSwLiazKGANA" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Juan Rejon 3</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/CpfBATSwLiazKGANA" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Simple and bright room ideal for short stays.</p>
@@ -608,18 +584,17 @@
           </div>
         </article>
 
-        <!-- RAYMOND (rooms, no 4-bed tag now) -->
+        <!-- RAYMOND (rooms, no 4-bed tag) -->
         <article class="card">
           <div class="card-img">
             <img src="images/ray1.jpg" alt="Raymond 1" />
-            <div class="badge">🏠 Raymond</div>
+            <a class="badge" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Raymond 1</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta">
               <span class="meta-pill">Private room</span>
@@ -634,14 +609,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/ray2.jpg" alt="Raymond 2" />
-            <div class="badge">🏠 Raymond</div>
+            <a class="badge" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Raymond 2</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta">
               <span class="meta-pill">Private room</span>
@@ -656,14 +630,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/ray3.jpg" alt="Raymond 3" />
-            <div class="badge">🏠 Raymond</div>
+            <a class="badge" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Raymond 3</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta">
               <span class="meta-pill">Private room</span>
@@ -678,14 +651,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/ray4.jpg" alt="Raymond 4" />
-            <div class="badge">🏠 Raymond</div>
+            <a class="badge" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Raymond 4</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/gg3kJGY3Y4MDDuNy6" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta">
               <span class="meta-pill">Private room</span>
@@ -701,14 +673,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/sev1.jpeg" alt="Sevilla 1" />
-            <div class="badge">🏠 Sevilla</div>
+            <a class="badge" href="https://maps.app.goo.gl/ix2UPzJ45DUFAHpY7" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Sevilla 1</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/ix2UPzJ45DUFAHpY7" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Comfortable room in the Sevilla apartment.</p>
@@ -721,14 +692,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/sev2.jpeg" alt="Sevilla 2" />
-            <div class="badge">🏠 Sevilla</div>
+            <a class="badge" href="https://maps.app.goo.gl/ix2UPzJ45DUFAHpY7" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Sevilla 2</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/ix2UPzJ45DUFAHpY7" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Another cozy room in the Sevilla apartment.</p>
@@ -741,14 +711,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/sev3.jpeg" alt="Sevilla 3" />
-            <div class="badge">🏠 Sevilla</div>
+            <a class="badge" href="https://maps.app.goo.gl/ix2UPzJ45DUFAHpY7" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Sevilla 3</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/ix2UPzJ45DUFAHpY7" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Room in a shared flat, ideal for simple stays.</p>
@@ -761,14 +730,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/sev4.jpeg" alt="Sevilla 4" />
-            <div class="badge">🏠 Sevilla</div>
+            <a class="badge" href="https://maps.app.goo.gl/ix2UPzJ45DUFAHpY7" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Sevilla 4</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/ix2UPzJ45DUFAHpY7" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Another room option in the Sevilla property.</p>
@@ -782,14 +750,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/sol1.avif" alt="Sol 1" />
-            <div class="badge">⭐ Sol</div>
+            <a class="badge" href="https://maps.app.goo.gl/W57P3T2ffthbCXgi9" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Sol 1</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/W57P3T2ffthbCXgi9" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Room in the Sol apartment — close to everything.</p>
@@ -802,14 +769,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/sol2.avif" alt="Sol 2" />
-            <div class="badge">⭐ Sol</div>
+            <a class="badge" href="https://maps.app.goo.gl/W57P3T2ffthbCXgi9" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Sol 2</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/W57P3T2ffthbCXgi9" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Another room option in the Sol apartment.</p>
@@ -822,14 +788,13 @@
         <article class="card">
           <div class="card-img">
             <img src="images/sol3.avif" alt="Sol 3" />
-            <div class="badge">⭐ Sol</div>
+            <a class="badge" href="https://maps.app.goo.gl/W57P3T2ffthbCXgi9" target="_blank">
+              <span>📍</span><span>see on map</span>
+            </a>
           </div>
           <div class="card-body">
             <div class="card-header">
               <div class="card-title">Sol 3</div>
-              <a class="location-icon" href="https://maps.app.goo.gl/W57P3T2ffthbCXgi9" target="_blank">
-                <span>📍</span><span>see on map</span>
-              </a>
             </div>
             <div class="meta"><span class="meta-pill">Private room</span></div>
             <p class="desc">Third room in the Sol apartment.</p>
