@@ -20,13 +20,15 @@
       --radius-lg: 18px;
       --shadow-soft: 0 8px 24px rgba(0,0,0,0.05);
 
-      /* Buttons colors */
-      --airbnb-orange: #ff5a5f;
-      --airbnb-orange-hover: #e14e52;
-      --booking-blue: #1e6edb;
-      --booking-blue-hover: #195cb8;
-      --whatsapp-green: #25D366;
-      --whatsapp-green-hover: #1ebe5d;
+      /* Softer pastel button colors */
+      --airbnb-orange: #ff9ea8;
+      --airbnb-orange-hover: #ff7b88;
+
+      --booking-blue: #9ebdff;
+      --booking-blue-hover: #7ba0ff;
+
+      --whatsapp-green: #a8e8c3;
+      --whatsapp-green-hover: #84d8aa;
     }
 
     * { box-sizing: border-box; }
@@ -232,8 +234,13 @@
       border: 1px solid transparent;
       text-decoration: none;
       cursor: pointer;
-      transition: background 0.18s ease, color 0.18s ease, border 0.18s ease;
+      transition: background 0.18s ease, color 0.18s ease, border 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
       white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.05);
     }
 
     /* PINK Airbnb (rooms + full places) */
@@ -259,7 +266,7 @@
       border-color: var(--airbnb-orange-hover);
     }
 
-    /* BLUE Booking – solid blue, white text */
+    /* BLUE Booking – pastel blue, white text */
     .btn-booking {
       background: var(--booking-blue);
       color: #fff;
@@ -272,7 +279,7 @@
       border-color: var(--booking-blue-hover);
     }
 
-    /* WHATSAPP GREEN */
+    /* WHATSAPP GREEN – pastel */
     .btn-whatsapp {
       background: var(--whatsapp-green);
       color: #fff;
