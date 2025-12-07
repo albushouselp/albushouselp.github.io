@@ -11,7 +11,7 @@
 
   <style>
     :root {
-      --bg: #f4f6f1;
+      --bg: #f4f0e6; /* beige */
       --card-bg: #ffffff;
       --accent: #4f9d69;
       --accent-soft: rgba(79,157,105,0.16);
@@ -40,20 +40,7 @@
       position: relative;
       min-height: 100vh;
       overflow-x: hidden;
-      background: #f4f6f1; /* fallback under parallax */
-    }
-
-    /* PARALLAX BACKGROUND LAYER */
-    .parallax-bg {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background-image: url("images/bg.jpg");
-      background-size: cover;
-      background-position: center 0px;
-      background-repeat: no-repeat;
-      filter: blur(15px);
-      transform: scale(1.05); /* avoid blur edges */
+      background: var(--bg); /* solid beige */
     }
 
     .page {
@@ -308,9 +295,6 @@
   </style>
 </head>
 <body>
-  <!-- PARALLAX BACKGROUND -->
-  <div class="parallax-bg"></div>
-
   <div class="page">
     <header>
       <div class="logo-pill">
@@ -327,11 +311,8 @@
     <main>
       <section class="grid">
 
-        <!-- =============================== -->
-        <!-- ===== FULL PLACES FIRST ======= -->
-        <!-- =============================== -->
+        <!-- FULL PLACES -->
 
-        <!-- 1. Canteras Beach Life Apartment (Raymond full) -->
         <article class="card card-full">
           <div class="card-img">
             <img src="images/ray.jpeg" alt="Canteras Beach Life Apartment" />
@@ -355,7 +336,6 @@
           </div>
         </article>
 
-        <!-- 2. Canteras Beach Studio (Morote) -->
         <article class="card card-full">
           <div class="card-img">
             <img src="images/morote.jpeg" alt="Canteras Beach Studio" />
@@ -379,7 +359,6 @@
           </div>
         </article>
 
-        <!-- 3. Cozy Sunny Studio (Albareda) — Booking ONLY -->
         <article class="card card-full">
           <div class="card-img">
             <img src="images/alb.jpeg" alt="Cozy Sunny Studio" />
@@ -402,7 +381,6 @@
           </div>
         </article>
 
-        <!-- 4. Linda Reina (2 bedrooms) -->
         <article class="card card-full">
           <div class="card-img">
             <img src="images/linrey.avif" alt="Linda Reina" />
@@ -426,7 +404,6 @@
           </div>
         </article>
 
-        <!-- 5. Preciosa Reina (1 bedroom) -->
         <article class="card card-full">
           <div class="card-img">
             <img src="images/prerey.avif" alt="Preciosa Reina" />
@@ -450,7 +427,6 @@
           </div>
         </article>
 
-        <!-- 6. Lovely Spacious Three Bedroom Flat (Rejón full: 3 bedrooms + Entire apartment) -->
         <article class="card card-full">
           <div class="card-img">
             <img src="images/rej.jpeg" alt="Lovely Spacious Three Bedroom Flat" />
@@ -474,9 +450,8 @@
           </div>
         </article>
 
-        <!-- =============================== -->
-        <!-- ======= PRIVATE ROOMS ========= -->
-        <!-- =============================== -->
+        <!-- ROOMS (same as before, just on beige background and pastel buttons) -->
+        <!-- Bentagache, Rejon rooms, Raymond rooms, Sevilla 1–4, Sol 1–3 ... -->
 
         <!-- BENTAGACHE 1–4 -->
         <article class="card">
@@ -620,7 +595,7 @@
           </div>
         </article>
 
-        <!-- RAYMOND (rooms, no 4-bed tag) -->
+        <!-- RAYMOND rooms -->
         <article class="card">
           <div class="card-img">
             <img src="images/ray1.jpg" alt="Raymond 1" />
@@ -860,16 +835,7 @@
   </div>
 
   <script>
-    // year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // PARALLAX EFFECT: move background image slower than scroll
-    const parallax = document.querySelector('.parallax-bg');
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset || document.documentElement.scrollTop;
-      const offset = scrolled * 0.3; // 0.3 = slower than content
-      parallax.style.backgroundPosition = `center ${-offset}px`;
-    });
   </script>
 </body>
 </html>
